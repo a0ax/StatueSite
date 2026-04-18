@@ -15,9 +15,12 @@
     interface Project {
         title: string;
         urls: Array<{ url: string; icon: string }>;
+
         description: string;
         tech: string;
         date: string;
+        views?: string;
+        downloads?: string;
     }
 
     interface PageData {
@@ -823,9 +826,9 @@
     <div  class="absolute top-0 left-0 z-30 h-full w-full p-6 md:p-8 pointer-events-auto">
         <div bind:this={scrollContainer} onscroll={handleScroll} class="overflow-y-auto custom-scrollbar h-full w-full">
         <div class="pr-auto w-fit max-w-[80%] md:max-w-[50%] lg:max-w-[40%] bg-transparent bg-opacity-100 text-shadow-lg text-shadow-black  rounded-lg p-6 md:p-8 overflow-y-visible">
-            <div class="pb-4">
+            <!-- <div class="pb-4">
                     <p class="font-['Rubik'] text-sm text-gray-300 font-bold">highlights: 40m software downloads,<br>65m human page views. xi jingping's<br>daughter used one of my sites</p>
-            </div>
+            </div>-->
             
             <div class="w-full flex items-center gap-3 mb-4">
                 <div class="flex-1 h-px bg-white"></div>
@@ -954,9 +957,23 @@
                                 </div>
                                 <p class="text-gray-300 leading-relaxed tracking-tighter font-['Rubik']">{project.description}</p>
                                 <div class="flex items-center gap-3 text-sm tracking-tight text-gray-400 font-['Rubik']">
-                                    <span>{project.tech}</span>
+                                    <span class="tech">{project.date}</span>
                                     <span class="text-xs">◆</span>
-                                    <span>{project.date}</span>
+                                    <div class="date">{project.tech}</div>
+                                    {#if project.views}
+                                        <span class="text-xs">◆</span>
+                                        <div class="views transform -translate-x-1">
+                                            <svg class="transform -translate-x-0.5" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="currentColor"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                                            {project.views}
+                                        </div>
+                                    {/if}
+                                    {#if project.downloads}
+                                        <span class="text-xs">◆</span>
+                                        <div class="downloads transform -translate-x-1">
+                                            <svg  xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+                                            {project.downloads}
+                                        </div>
+                                    {/if}
                                 </div>
                             </div>
                         </div>
@@ -1017,5 +1034,20 @@
 
     .splash-screen {
         transition: opacity 0.5s ease-in-out;
+    }
+
+    .downloads, .views {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 1em;
+    }
+
+    .downloads svg, .views svg {
+        opacity: 0.8;
+    }
+
+    .tech {
+        font-size: 1em;
     }
 </style>

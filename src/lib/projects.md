@@ -9,6 +9,8 @@
 **Description:** Multi-environment geospatial analysis framework
 **Tech:** Rust, Webassembly, Typescript, Python
 **Date:** 2025
+**Downloads:** 58.5k
+
 
 ---
 
@@ -27,9 +29,10 @@
 **URLS:** 
     https://github.com/a0a7/GarminHOTP|github,
     https://apps.garmin.com/apps/b3ae41f2-3710-4368-a365-4d1ba1b3770c|garmin 
-**Description:** 2FA Code System for Garmin Watches
+**Description:** 2FA Code System for Garmin Smartwatches
 **Tech:** MonkeyC  
 **Date:** 2025
+**Downloads:** 9.5k
 
 ---
 
@@ -40,6 +43,8 @@
 **Description:** radarr/sonarr integration for public broadcasters
 **Tech:** Python, Docker 
 **Date:** 2025  
+**Downloads:** 8.02k
+
 
 ---
 
@@ -50,6 +55,8 @@
 **Description:** clean résumé builder
 **Tech:** Svelte, Typescript, Tailwind 
 **Date:** 2025  
+**Views:** 1.84m
+
 
 ---
 
@@ -60,7 +67,7 @@
 **Description:** Beautiful strength training analytics
 **Tech:** Svelte, Typescript, Tailwind 
 **Date:** 2024  
-
+**Views:** 55.4k
 
 ---
 
@@ -71,8 +78,7 @@
 **Description:** A better way to use Strava
 **Tech:** Svelte, Typescript, Tailwind 
 **Date:** 2024  
-
-
+**Views:** 108.2k
 
 ---
 
@@ -81,10 +87,10 @@
     https://github.com/aesefficio/DynamicVillageMod|github,
     https://www.curseforge.com/minecraft/mc-mods/dynamic-village|curseforge,
     https://modrinth.com/mod/dynamic-village|modrinth 
-**Description:** Minecraft add-on - Downloads >5m
+**Description:** Minecraft add-on
 **Tech:** Java
 **Date:** 2023
-
+**Downloads:** 7.5m
 
 ---
 
@@ -93,9 +99,10 @@
     https://github.com/aesefficio/BellsAndWhistlesMod|github,
     https://www.curseforge.com/minecraft/mc-mods/bellsandwhistles|curseforge,
     https://modrinth.com/mod/bellsandwhistles|modrinth 
-**Description:** Minecraft add-on - Downloads >10m
+**Description:** Minecraft add-on
 **Tech:** Java
 **Date:** 2023
+**Downloads:** 17.5m
 
 ---
 
@@ -107,3 +114,5 @@
 **Description:** Minecraft add-on - Downloads >10m
 **Tech:** Java
 **Date:** 2023
+**Downloads:** 20m
+

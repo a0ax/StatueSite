@@ -7,6 +7,8 @@ interface Project {
     description: string;
     tech: string;
     date: string;
+    views?: string;
+    downloads?: string;
 }
 
 export async function load() {
@@ -91,6 +93,16 @@ function parseProjectsFromMarkdown(markdown: string): Project[] {
         // Date line
         else if (line.startsWith('**Date:**') && currentProject) {
             currentProject.date = line.replace('**Date:**', '').trim();
+            collectingUrls = false;
+        }
+        // Views line
+        else if (line.startsWith('**Views:**') && currentProject) {
+            currentProject.views = line.replace('**Views:**', '').trim();
+            collectingUrls = false;
+        }
+        // Downloads line
+        else if (line.startsWith('**Downloads:**') && currentProject) {
+            currentProject.downloads = line.replace('**Downloads:**', '').trim();
             collectingUrls = false;
         }
     }
