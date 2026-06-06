@@ -9,17 +9,16 @@
 **Description:** Multi-environment geospatial analysis framework
 **Tech:** Rust, Webassembly, Typescript, Python
 **Date:** 2025
-**Downloads:** 58.5k
-
+**Downloads:** 108.5k
 
 ---
 
-## autoauth Browser Extension
+## autoauth 
 **URLS:** 
     https://github.com/a0a7/autoauth|github,
     https://chromewebstore.google.com/detail/autoauth-never-use-duo-mo/mlmjinkmpgijhikmapdegjgbnchbcfbh?utm_source=item-share-cb|chrome, 
     https://addons.mozilla.org/en-US/firefox/addon/auto_auth/|firefox
-**Description:** Browser port of Cisco duo mobile authenticator
+**Description:** Cisco duo mobile authenticator in your browser
 **Tech:** Typescript, Svelte  
 **Date:** 2025
 
@@ -32,7 +31,7 @@
 **Description:** 2FA Code System for Garmin Smartwatches
 **Tech:** MonkeyC  
 **Date:** 2025
-**Downloads:** 9.5k
+**Downloads:** 1.4k
 
 ---
 
@@ -40,10 +39,10 @@
 **URLS:** 
     https://github.com/a0a7/publicbroadcastarr|github,
     https://hub.docker.com/r/a0a7/publicbroadcastarr|docker 
-**Description:** radarr/sonarr integration for public broadcasters
+**Description:** radarr & sonarr integration for SVT & NRK
 **Tech:** Python, Docker 
 **Date:** 2025  
-**Downloads:** 8.02k
+**Downloads:** 8.72k
 
 
 ---
@@ -64,7 +63,7 @@
 **URLS:** 
     https://github.com/a0a7/muscles.ooo|github,
     https://garmin.a0.ax|web 
-**Description:** Beautiful strength training analytics
+**Description:** Strength training analytics for Garmin users
 **Tech:** Svelte, Typescript, Tailwind 
 **Date:** 2024  
 **Views:** 55.4k
@@ -90,7 +89,7 @@
 **Description:** Minecraft add-on
 **Tech:** Java
 **Date:** 2023
-**Downloads:** 7.5m
+**Downloads:** 7.7m
 
 ---
 
@@ -102,7 +101,7 @@
 **Description:** Minecraft add-on
 **Tech:** Java
 **Date:** 2023
-**Downloads:** 17.5m
+**Downloads:** 29.4m
 
 ---
 
@@ -114,5 +113,5 @@
 **Description:** Minecraft add-on - Downloads >10m
 **Tech:** Java
 **Date:** 2023
-**Downloads:** 20m
+**Downloads:** 22.8m
 
