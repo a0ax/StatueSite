@@ -1,12 +1,31 @@
 # projects
 
+## grindset.website
+**URLS:** 
+    https://github.com/a0a7/WorkoutTrackerApp|github,
+    https://grindset.website/|web 
+**Description:** Gym logbook with uniquely low-friction data entry and powerful analytics 
+**Tech:** Svelte, Typescript, Tailwind
+**Date:** 2026
+**Views:** 1.82m
+
+## stravamap.me//motiongis
+**URLS:** 
+    https://github.com/strava-tools/StravaMapper|github,
+    https://stravamap.me/|web 
+**Description:** Analytics & data visualization suite for Strava
+**Tech:** Svelte, Typescript, Tailwind
+**Date:** 2026
+**Views:** 550.2k
+
 ## fastgeotoolkit//motiongis
 **URLS:** 
     https://github.com/a0a7/fastgeotoolkit|github,
+    https://heatmap.fit/|web 
     https://www.npmjs.com/package/fastgeotoolkit|npm, 
     https://crates.io/crates/fastgeotoolkit|rust, 
     https://pypi.org/project/fastgeotoolkit/|python
-**Description:** Multi-environment geospatial analysis framework
+**Description:** Multi-environment geospatial analysis framework with strong extensibility, documentation and a demo
 **Tech:** Rust, Webassembly, Typescript, Python
 **Date:** 2025
 **Downloads:** 108.5k
