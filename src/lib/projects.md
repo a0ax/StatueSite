@@ -69,7 +69,7 @@
 ## effortless.cv
 **URLS:** 
     https://github.com/a0a7/effortless.cv|github,
-    https://effortless.cv/|web 
+    https://web.archive.org/web/20260607034332id_/https://effortless.cv/|web 
 **Description:** clean résumé builder
 **Tech:** Svelte, Typescript, Tailwind 
 **Date:** 2025  
