@@ -2,17 +2,17 @@
 
 ## grindset.website
 **URLS:** 
-    https://github.com/a0a7/WorkoutTrackerApp|github,
-    https://grindset.website/|web 
-**Description:** Gym logbook with uniquely low-friction data entry and powerful analytics 
+    https://grindset.website/|web,
+    https://github.com/a0a7/WorkoutTrackerApp|github
+**Description:** Gym logbook built for low-friction data entry and useful analytics 
 **Tech:** Svelte, Typescript, Tailwind
 **Date:** 2026
 **Views:** 1.82m
 
 ## stravamap.me//motiongis
 **URLS:** 
-    https://github.com/strava-tools/StravaMapper|github,
-    https://stravamap.me/|web 
+    https://stravamap.me/|web,
+    https://github.com/strava-tools/StravaMapper|github
 **Description:** Analytics & data visualization suite for Strava
 **Tech:** Svelte, Typescript, Tailwind
 **Date:** 2026
@@ -25,7 +25,7 @@
     https://www.npmjs.com/package/fastgeotoolkit|npm, 
     https://crates.io/crates/fastgeotoolkit|rust, 
     https://pypi.org/project/fastgeotoolkit/|python
-**Description:** Multi-environment geospatial analysis framework with strong extensibility, documentation and a demo
+**Description:** Innovative geospatial analysis framework for any platform
 **Tech:** Rust, Webassembly, Typescript, Python
 **Date:** 2025
 **Downloads:** 108.5k
@@ -105,22 +105,10 @@
     https://github.com/aesefficio/DynamicVillageMod|github,
     https://www.curseforge.com/minecraft/mc-mods/dynamic-village|curseforge,
     https://modrinth.com/mod/dynamic-village|modrinth 
-**Description:** Minecraft add-on
+**Description:** Minecraft economy & trading modification
 **Tech:** Java
 **Date:** 2023
 **Downloads:** 7.7m
-
----
-
-## Bells & Whistles//aes
-**URLS:** 
-    https://github.com/aesefficio/BellsAndWhistlesMod|github,
-    https://www.curseforge.com/minecraft/mc-mods/bellsandwhistles|curseforge,
-    https://modrinth.com/mod/bellsandwhistles|modrinth 
-**Description:** Minecraft add-on
-**Tech:** Java
-**Date:** 2023
-**Downloads:** 29.4m
 
 ---
 
@@ -129,8 +117,20 @@
     https://github.com/aesefficio/CreateInteriorsMod|github,
     https://www.curseforge.com/minecraft/mc-mods/interiors|curseforge,
     https://modrinth.com/mod/interiors|modrinth 
-**Description:** Minecraft add-on - Downloads >10m
+**Description:** Mofification for Minecraft made to complement the Create mod
 **Tech:** Java
 **Date:** 2023
 **Downloads:** 22.8m
 
+
+---
+
+## Bells & Whistles//aes
+**URLS:** 
+    https://github.com/aesefficio/BellsAndWhistlesMod|github,
+    https://www.curseforge.com/minecraft/mc-mods/bellsandwhistles|curseforge,
+    https://modrinth.com/mod/bellsandwhistles|modrinth 
+**Description:** Globally popular modification for Minecraft  
+**Tech:** Java
+**Date:** 2023
+**Downloads:** 29.4m
