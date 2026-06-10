@@ -826,9 +826,10 @@
     <div  class="absolute top-0 left-0 z-30 h-full w-full p-6 md:p-8 pointer-events-auto">
         <div bind:this={scrollContainer} onscroll={handleScroll} class="overflow-y-auto custom-scrollbar h-full w-full">
         <div class="pr-auto w-fit max-w-[80%] md:max-w-[50%] lg:max-w-[40%] bg-transparent bg-opacity-100 text-shadow-lg text-shadow-black  rounded-lg p-6 md:p-8 overflow-y-visible">
-            <!-- <div class="pb-4">
-                    <p class="font-['Rubik'] text-sm text-gray-300 font-bold">highlights: 40m software downloads,<br>65m human page views. xi jingping's<br>daughter used one of my sites</p>
-            </div>-->
+            <div class="pb-4">
+                    <h1>Alexander Weimer</h1>
+                    <h2 class="font-['Rubik'] text-sm text-gray-300 font-bold">Electrical Engineering Research @ UMN</h2>
+            </div>
             
             <div class="w-full flex items-center gap-3 mb-4">
                 <div class="flex-1 h-px bg-white"></div>
