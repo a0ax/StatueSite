@@ -838,7 +838,7 @@
             </div>
             <div class="flex items-center gap-4 md:gap-10 pb-2 pt-3 justify-center">
                 <a 
-                    href="https://github.com/a0a7" 
+                    href="https://github.com/a0ax" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     class="flex items-center gap-2 text-gray-300 hover:text-gray-400 transition-colors duration-200 font-['Rubik'] text-sm"
