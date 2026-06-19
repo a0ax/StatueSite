@@ -3,7 +3,7 @@
 ## grindset.website
 **URLS:** 
     https://grindset.website/|web,
-    https://github.com/a0a7/WorkoutTrackerApp|github
+    https://github.com/a0ax/WorkoutTrackerApp|github
 **Description:** Gym logbook built for low-friction data entry and useful analytics 
 **Tech:** Svelte, Typescript, Tailwind
 **Date:** 2026
@@ -20,7 +20,7 @@
 
 ## fastgeotoolkit//motiongis
 **URLS:** 
-    https://github.com/a0a7/fastgeotoolkit|github,
+    https://github.com/a0ax/fastgeotoolkit|github,
     https://heatmap.fit/|web 
     https://www.npmjs.com/package/fastgeotoolkit|npm, 
     https://crates.io/crates/fastgeotoolkit|rust, 
@@ -34,7 +34,7 @@
 
 ## autoauth 
 **URLS:** 
-    https://github.com/a0a7/autoauth|github,
+    https://github.com/a0ax/autoauth|github,
     https://chromewebstore.google.com/detail/autoauth-never-use-duo-mo/mlmjinkmpgijhikmapdegjgbnchbcfbh?utm_source=item-share-cb|chrome, 
     https://addons.mozilla.org/en-US/firefox/addon/auto_auth/|firefox
 **Description:** Cisco duo mobile authenticator in your browser
@@ -45,7 +45,7 @@
     
 ## Garmin OTP Keychain
 **URLS:** 
-    https://github.com/a0a7/GarminHOTP|github,
+    https://github.com/a0ax/GarminHOTP|github,
     https://apps.garmin.com/apps/b3ae41f2-3710-4368-a365-4d1ba1b3770c|garmin 
 **Description:** 2FA Code System for Garmin Smartwatches
 **Tech:** MonkeyC  
@@ -56,8 +56,8 @@
 
 ## publicbroadcastarr
 **URLS:** 
-    https://github.com/a0a7/publicbroadcastarr|github,
-    https://hub.docker.com/r/a0a7/publicbroadcastarr|docker 
+    https://github.com/a0ax/publicbroadcastarr|github,
+    https://hub.docker.com/r/a0ax/publicbroadcastarr|docker 
 **Description:** radarr & sonarr integration for SVT & NRK
 **Tech:** Python, Docker 
 **Date:** 2025  
@@ -68,7 +68,7 @@
 
 ## effortless.cv
 **URLS:** 
-    https://github.com/a0a7/effortless.cv|github,
+    https://github.com/a0ax/effortless.cv|github,
     https://web.archive.org/web/20260607034332id_/https://effortless.cv/|web 
 **Description:** clean résumé builder
 **Tech:** Svelte, Typescript, Tailwind 
@@ -80,7 +80,7 @@
 
 ## muscles.ooo//motiongis
 **URLS:** 
-    https://github.com/a0a7/muscles.ooo|github,
+    https://github.com/a0ax/muscles.ooo|github,
     https://garmin.a0.ax|web 
 **Description:** Strength training analytics for Garmin users
 **Tech:** Svelte, Typescript, Tailwind 
@@ -91,7 +91,7 @@
 
 ## strava.tools//motiongis
 **URLS:** 
-    https://github.com/a0a7/strava.tools|github,
+    https://github.com/a0ax/strava.tools|github,
     https://strava.a0.ax/|web 
 **Description:** A better way to use Strava
 **Tech:** Svelte, Typescript, Tailwind 
