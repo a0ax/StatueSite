@@ -827,7 +827,7 @@
         <div bind:this={scrollContainer} onscroll={handleScroll} class="overflow-y-auto custom-scrollbar h-full w-full">
         <div class="pr-auto w-fit max-w-[80%] md:max-w-[50%] lg:max-w-[40%] bg-transparent bg-opacity-100 text-shadow-lg text-shadow-black  rounded-lg p-6 md:p-8 overflow-y-visible">
             <div class="pb-4">
-                    <h1>Alexander Weimer</h1>
+                    <h1>Alexander Akira Weimer</h1>
                     <h2 class="font-['Rubik'] text-sm text-gray-300 font-bold">Electrical Engineering Research @ UMN</h2>
             </div>
             
