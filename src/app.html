@@ -8,6 +8,7 @@
   "@type": "Person",
   "name": "Alexander Weimer",
   "alternateName": ["Alexander Akira Weimer", "a0ax"],
+	"image": "https://a0.ax/headshot.jpg"
   "url": "https://a0.ax",
   "jobTitle": "Researcher",
   "worksFor": {
@@ -20,13 +21,37 @@
     "addressCountry": "US"
   },
   "email": "a0@ieee.org",
-  "birthPlace": "Sweden",
-  "nationality": "Swedish",
+{
+  "@type": "Place",
+  "name": "Stockholm, Sweden"
+},
+		"nationality": {
+  "@type": "Country",
+  "name": "Sweden"
+},
   "gender": "Male",
-  "alumniOf": "University of Minnesota",
-  "memberOf": [
-    "Institute of Electrical and Electronics Engineers"
-  ],
+	"alumniOf": {
+	  "@type": "CollegeOrUniversity",
+	  "name": "University of Minnesota",
+	  "url": "https://umn.edu"
+	},
+	"affiliation": {
+  "@type": "CollegeOrUniversity",
+  "name": "University of Minnesota",
+  "url": "https://umn.edu"
+	},
+	"memberOf": [
+  {
+    "@type": "Organization",
+    "name": "Institute of Electrical and Electronics Engineers",
+    "url": "https://www.ieee.org"
+  },
+	{
+  "@type": "CollegeOrUniversity",
+  "name": "University of Minnesota",
+  "url": "https://umn.edu"
+	},
+]
   "sameAs": [
     "https://www.wikidata.org/wiki/Q140149264",
     "https://www.linkedin.com/in/alexander-weimer",
@@ -38,8 +63,19 @@
     "https://osf.io/user/42p8h",
     "https://umn.academia.edu/AlexanderWeimer",
 	"https://owasp.umn.edu/alexander",
+	"https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=12292708"
   ]
-}
+},
+"givenName": "Alexander",
+"familyName": "Weimer",
+"honorificPrefix": "",
+"knowsAbout": [
+  "Electrical Engineering",
+  "Machine Learning",
+  "Geographic Information Systems",
+  "Semiconductor Materials",
+  "Open Source Software"
+]
 </script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
