@@ -6,22 +6,35 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
+	"@id": "https://a0.ax/#person",
   "name": "Alexander Weimer",
   "alternateName": ["Alexander Akira Weimer", "a0ax"],
   "image": "https://a0.ax/headshot.jpg",
   "url": "https://a0.ax",
-  "jobTitle": "Researcher",
+  "jobTitle": "Electrical Engineering Researcher",
+	"givenName": "Alexander",
+	"familyName": "Weimer",
+	"knowsAbout": [
+	  "Electrical Engineering",
+	  "Machine Learning",
+	  "Geographic Information Systems",
+	  "Semiconductor Materials",
+	  "Open Source Software"
+	],
   "worksFor": {
     "@type": "Organization",
     "name": "University of Minnesota",
     "url": "https://umn.edu"
   },
+		"founder": {
+  "@id": "https://aesefficio.a0.ax/#organization"
+},
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "US"
   },
   "email": "a0@ieee.org",
-  {
+  "birthPlace":{
 	  "@type": "Place",
 	  "name": "Stockholm, Sweden"
   },
@@ -47,11 +60,11 @@
 	    "url": "https://www.ieee.org"
 	  },
 	  {
-		  "@type": "CollegeOrUniversity",
-		  "name": "University of Minnesota",
-		  "url": "https://umn.edu"
-		},
-	]
+		  "@type": "Open Worldwide Application Security Project (OWASP) UMN",
+		  "name": "OWASP",
+		  "url": "https://owasp.umn.edu"
+		}
+	],
 	"sameAs": [
 	    "https://www.wikidata.org/wiki/Q140149264",
 	    "https://www.linkedin.com/in/alexander-weimer",
@@ -65,17 +78,7 @@
 	    "https://umn.academia.edu/AlexanderWeimer",
 		"https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=12292708"
 	  ]
-},
-"givenName": "Alexander",
-"familyName": "Weimer",
-"honorificPrefix": "",
-"knowsAbout": [
-  "Electrical Engineering",
-  "Machine Learning",
-  "Geographic Information Systems",
-  "Semiconductor Materials",
-  "Open Source Software"
-]
+}
 </script>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
