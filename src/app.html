@@ -9,8 +9,11 @@
 	"@id": "https://a0.ax/#person",
   "name": "Alexander Weimer",
   "alternateName": ["Alexander Akira Weimer", "a0ax"],
-  "image": "https://a0.ax/headshot.jpg",
-  "url": "https://a0.ax",
+	"image": {
+	  "@type": "ImageObject",
+	  "url": "https://a0.ax/headshot.jpg"
+	},
+	"url": "https://a0.ax",
   "jobTitle": "Electrical Engineering Researcher",
 	"givenName": "Alexander",
 	"familyName": "Weimer",
@@ -33,7 +36,6 @@
     "@type": "PostalAddress",
     "addressCountry": "US"
   },
-  "email": "a0@ieee.org",
   "birthPlace":{
 	  "@type": "Place",
 	  "name": "Stockholm, Sweden"
@@ -42,12 +44,22 @@
   	"@type": "Country",
   	"name": "Sweden"
   },
-  "gender": "Male",
+	"identifier": [
+	  {
+	    "@type": "PropertyValue",
+	    "propertyID": "ORCID",
+	    "value": "0009-0009-7313-138X"
+	  }
+	],
   "alumniOf": {
 	  "@type": "CollegeOrUniversity",
 	  "name": "University of Minnesota",
 	  "url": "https://umn.edu"
   },
+	"mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://a0.ax/"
+},
   "affiliation": {
   	"@type": "CollegeOrUniversity",
   	"name": "University of Minnesota",
@@ -60,23 +72,29 @@
 	    "url": "https://www.ieee.org"
 	  },
 	  {
-		  "@type": "Open Worldwide Application Security Project (OWASP) UMN",
+		  "@type": "Organization	",
 		  "name": "OWASP",
 		  "url": "https://owasp.umn.edu"
 		}
 	],
 	"sameAs": [
 	    "https://www.wikidata.org/wiki/Q140149264",
-	    "https://www.linkedin.com/in/alexander-weimer",
 		"https://owasp.umn.edu/alexander",
 	    "https://scholar.google.com/citations?user=9cVn1s0AAAAJ",
 	    "https://orcid.org/0009-0009-7313-138X",
 	    "https://www.imdb.com/name/nm18641657",
 	    "https://www.researchgate.net/profile/Alexander-Weimer",
-	    "https://github.com/a0ax",
 	    "https://osf.io/user/42p8h",
 	    "https://umn.academia.edu/AlexanderWeimer",
-		"https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=12292708"
+		"https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=12292708",
+		"https://github.com/a0ax",
+		"https://modrinth.com/user/a0ax",
+		"https://www.curseforge.com/members/a0ax",
+		"https://crates.io/users/a0ax",
+		"https://huggingface.co/a0ax",
+		"https://stackoverflow.com/users/20719072/a0ax",
+		"https://electronics.stackexchange.com/users/336421/a0ax",
+		"https://gravatar.com/a0ax"
 	  ]
 }
 </script>
