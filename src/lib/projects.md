@@ -1,5 +1,23 @@
 # projects
 
+## ArbiterPUF
+**URLS:** 
+    https://github.com/a0ax/ArbiterPUF|github
+**Description:** Compact RTL framework for simulating Arbiter PUF variants, extracting CRPs, measuring core PUF metrics, and benchmarking simple modeling attacks
+**Tech:** SystemVerilog, Python
+**Date:** 2026
+
+---
+
+## QubitPulseGenerator
+**URLS:** 
+    https://github.com/a0ax/QubitPulseGenerator|github
+**Description:** Multi-channel programmable pulse generator for qubit control
+**Tech:** SystemVerilog, Python
+**Date:** 2026
+
+---
+
 ## grindset.website
 **URLS:** 
     https://grindset.website/|web,
@@ -8,6 +26,9 @@
 **Tech:** Svelte, Typescript, Tailwind
 **Date:** 2026
 **Views:** 1.82m
+
+---
+
 
 ## stravamap.me//motiongis
 **URLS:** 
