@@ -1,5 +1,6 @@
 import { marked } from 'marked';
 import projectsMarkdown from '$lib/projects.md?raw';
+import publicationsMarkdown from '$lib/publications.md?raw';   // <-- new import
 
 interface Project {
     title: string;
@@ -11,19 +12,7 @@ interface Project {
     downloads?: string;
 }
 
-export async function load() {
-    // Parse projects from the imported markdown string
-    const projects = parseProjectsFromMarkdown(projectsMarkdown);
-    
-    // Parse markdown to HTML
-    const htmlContent = marked(projectsMarkdown);
-    
-    return {
-        projects,
-        htmlContent
-    };
-}
-
+// ─── same parser, works for both ───
 function parseProjectsFromMarkdown(markdown: string): Project[] {
     const projects: Project[] = [];
     const lines = markdown.split('\n');
@@ -33,7 +22,6 @@ function parseProjectsFromMarkdown(markdown: string): Project[] {
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
         
-        // Project title (## Project Name)
         if (line.startsWith('## ') && !line.startsWith('# ')) {
             if (currentProject) {
                 projects.push(currentProject);
@@ -47,10 +35,8 @@ function parseProjectsFromMarkdown(markdown: string): Project[] {
             };
             collectingUrls = false;
         }
-        // URLs line
         else if (line.startsWith('**URLS:**') && currentProject) {
             collectingUrls = true;
-            // Check if URLs are on the same line
             const urlsText = line.replace('**URLS:**', '').trim();
             if (urlsText) {
                 const urlEntries = urlsText.split(',').map(entry => entry.trim());
@@ -64,10 +50,8 @@ function parseProjectsFromMarkdown(markdown: string): Project[] {
                 collectingUrls = false;
             }
         }
-        // Collect URL lines (indented lines after **URLS:**)
         else if (collectingUrls && currentProject && line && !line.startsWith('**')) {
-            // This is a URL line, parse it
-            const urlEntry = line.replace(/,$/, '').trim(); // Remove trailing comma
+            const urlEntry = line.replace(/,$/, '').trim();
             if (urlEntry) {
                 const parts = urlEntry.split('|');
                 if (parts[0].trim()) {
@@ -78,38 +62,48 @@ function parseProjectsFromMarkdown(markdown: string): Project[] {
                 }
             }
         }
-        // Description line
         else if (line.startsWith('**Description:**') && currentProject) {
             currentProject.description = line.replace('**Description:**', '').trim();
             collectingUrls = false;
         }
-        // Tech line
         else if (line.startsWith('**Tech:**') && currentProject) {
             const techText = line.replace('**Tech:**', '').trim();
-            // Only take the first technology
             currentProject.tech = techText.split(',')[0].trim();
             collectingUrls = false;
         }
-        // Date line
         else if (line.startsWith('**Date:**') && currentProject) {
             currentProject.date = line.replace('**Date:**', '').trim();
             collectingUrls = false;
         }
-        // Views line
         else if (line.startsWith('**Views:**') && currentProject) {
             currentProject.views = line.replace('**Views:**', '').trim();
             collectingUrls = false;
         }
-        // Downloads line
         else if (line.startsWith('**Downloads:**') && currentProject) {
             currentProject.downloads = line.replace('**Downloads:**', '').trim();
             collectingUrls = false;
         }
     }
     
-    // Add the last project
     if (currentProject) {
         projects.push(currentProject);
     }
     return projects;
+}
+
+export async function load() {
+    // Parse both markdown files
+    const projects = parseProjectsFromMarkdown(projectsMarkdown);
+    const publications = parseProjectsFromMarkdown(publicationsMarkdown);
+    
+    // Convert both to HTML (if you need)
+    const projectsHtml = marked(projectsMarkdown);
+    const publicationsHtml = marked(publicationsMarkdown);
+    
+    return {
+        projects,
+        publications,              // <-- now available in your page
+        projectsHtml,
+        publicationsHtml,
+    };
 }

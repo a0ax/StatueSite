@@ -29,6 +29,13 @@
 
     let { data }: { data: PageData } = $props();
 
+    let active = $state('projects'); // 'projects' | 'publications'
+
+    function setActive(option) {
+        if (option === active) return;
+        active = option;
+    }
+
     let container = $state();
     let renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.Camera;
     let spotLight: THREE.Object3D<THREE.Object3DEventMap>, lightHelper;
@@ -811,9 +818,10 @@
             renderer.render(scene, camera);
         }
     }
+    let innerWidth = $state(0);
 </script>
 
-<svelte:window on:resize={onWindowResize} />
+<svelte:window bind:innerWidth on:resize={onWindowResize} />
 
 <div class="relative w-full h-screen overflow-hidden bg-gray-900">
     <div bind:this={container} class="w-full h-full"></div>
@@ -826,10 +834,54 @@
     <div  class="absolute top-0 left-0 z-30 h-full w-full p-6 md:p-8 pointer-events-auto">
         <div bind:this={scrollContainer} onscroll={handleScroll} class="overflow-y-auto custom-scrollbar h-full w-full">
         <div class="pr-auto w-fit max-w-[80%] md:max-w-[50%] lg:max-w-[40%] bg-transparent bg-opacity-100 text-shadow-lg text-shadow-black  rounded-lg p-6 md:p-8 overflow-y-visible">
-            <div class="pb-4">
-                    <h1>Alexander Akira Weimer</h1>
+            <div class="pb-4 -translate-y-8">
+                    <h1>Alexander Weimer</h1>
                     <h2 class="font-['Rubik'] text-sm text-gray-300 font-bold">Electrical Engineering Research @ UMN</h2>
             </div>
+
+            <div class="absolute left-[-9000px]">
+  <a href="https://owasp.umn.edu/profile/alexander">OWASP profile page</a>
+  <a href="https://www.linkedin.com/in/alexander-weimer">LinkedIn</a>
+  <a href="https://ieee-collabratec.ieee.org/app/p/alexander">IEEE</a>
+  <a href="https://www.crunchbase.com/person/alexander-weimer-f388">Crunchbase</a>
+  <a href="https://scholar.google.com/citations?user=9cVn1s0AAAAJ">Google Scholar</a>
+  <a href="https://orcid.org/0009-0009-7313-138X">ORCID</a>
+  <a href="https://www.researchgate.net/profile/Alexander-Weimer">ResearchGate</a>
+  <a href="https://osf.io/user/42p8h">OSF</a>
+  <a href="https://umn.academia.edu/AlexanderWeimer">Academia</a>
+  <a href="https://scholar.openaire.eu/0009-0009-7313-138X">OpenAIRE</a>
+  <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=12292708">SSRN</a>
+  <a href="https://vixra.org/author/alexander_weimer">vixra</a>
+  <a href="https://github.com/a0ax">GitHub</a>
+  <a href="https://www.npmjs.com/~a0ax">npm</a>
+  <a href="https://crates.io/users/a0ax">crates.io</a>
+  <a href="https://pypi.org/user/a0a7/">PyPI</a>
+  <a href="https://hub.docker.com/u/a0a7">Docker Hub</a>
+  <a href="https://apps.garmin.com/developer/6fde0ad7-ad80-429f-b62c-510c3b472013/apps">Garmin</a>
+  <a href="https://chromewebstore.google.com/search/a0ax">Chrome Web Store</a>
+  <a href="https://addons.mozilla.org/en-US/firefox/user/18438447/">Firefox Add‑ons</a>
+  <a href="https://opencollective.com/a0ax">Open Collective</a>
+  <a href="https://huggingface.co/a0a7">Hugging Face</a>
+  <a href="https://www.kaggle.com/levtus">Kaggle</a>
+  <a href="https://modrinth.com/user/a0ax">Modrinth</a>
+  <a href="https://www.curseforge.com/members/a0ax">CurseForge</a>
+  <a href="https://www.modpackindex.com/author/72091/a0ax">Modpack Index</a>
+  <a href="https://www.mcmod.cn/author/30488.html">MC百科</a>
+  <a href="https://center.mcmod.cn/752707/">MC百科中心</a>
+  <a href="https://stackoverflow.com/users/20719072/a0ax">Stack Overflow</a>
+  <a href="https://electronics.stackexchange.com/users/336421/a0ax">Electronics SE</a>
+  <a href="https://dribbble.com/aIexander">Dribbble</a>
+  <a href="https://graphicdesign.stackexchange.com/users/179576/">Graphic Design SE</a>
+  <a href="https://english.stackexchange.com/users/477382/">English SE</a>
+  <a href="https://german.stackexchange.com/users/55511/">German SE</a>
+  <a href="https://crowdin.com/profile/a0ax">Crowdin</a>
+  <a href="https://app.transifex.com/user/profile/lev_/">Transifex</a>
+  <a href="https://www.wikidata.org/wiki/Q140149264">Wikidata</a>
+  <a href="https://gravatar.com/a0ax">Gravatar</a>
+  <a href="https://www.imdb.com/name/nm18641657">IMDb</a>
+  <a href="https://www.youtube.com/@0xA0A7">YouTube</a>
+</div>
+
             
             <div class="w-full flex items-center gap-3 mb-4">
                 <div class="flex-1 h-px bg-white"></div>
@@ -872,12 +924,220 @@
                 </button>        
             </div>
             
-            <div class="w-full flex items-center gap-3 mb-8">
-                <div class="flex-1 h-px bg-white"></div>
-                <h3 class="text-gray-200 text-lg sm:text-xl font-black font-['AnyaTamy'] whitespace-nowrap px-2">personal projects</h3>
-                <div class="flex-1 h-px bg-white"></div>
-            </div>                
+            <!-- ─── TOGGLE ─── -->
+<div class="w-full flex items-center gap-3 mb-8">
+  <!-- left divider -->
+  <div
+    class="flex-1 h-px transition-colors duration-400
+    {active === 'projects' ? 'bg-white/80' : 'bg-white/30'}"
+  ></div>
 
+  <!-- toggle options -->
+  <div class="flex items-center gap-2 sm:gap-3 px-2 select-none">
+    <!-- "personal projects" -->
+    <div
+      class="relative cursor-pointer"
+      role="button"
+      tabindex="0"
+      onclick={() => setActive('projects')}
+      onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('projects')}
+    >3
+      <span
+        class="text-lg sm:text-xl font-black font-['AnyaTamy'] transition-colors duration-300
+        {active === 'projects'
+          ? 'text-white hover:opacity-100'
+          : 'text-gray-500 hover:opacity-75'}"
+      >
+        {#if innerWidth > 1420}personal projects{:else}projects{/if}
+      </span>
+      <!-- underline -->
+      <span
+        class="absolute left-0 -bottom-1 w-full h-0.5 bg-current transition-transform duration-300
+        origin-center scale-x-0 {active === 'projects' ? 'scale-x-100' : ''}"
+      ></span>
+    </div>
+
+    <!-- separator -->
+    <span class="text-lg sm:text-xl font-black font-['AnyaTamy'] text-gray-500 select-none">
+      /
+    </span>
+
+    <!-- "selected publications" -->
+    <div
+      class="relative cursor-pointer"
+      role="button"
+      tabindex="0"
+      onclick={() => setActive('publications')}
+      onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('publications')}
+    >
+      <span
+        class="text-lg sm:text-xl font-black font-['AnyaTamy'] transition-colors duration-300
+        {active === 'publications'
+          ? 'text-white hover:opacity-100'
+          : 'text-gray-500 hover:opacity-75'}"
+      >
+        {#if innerWidth > 1420}selected publications{:else}publications{/if}
+      </span>
+      <!-- underline -->
+      <span
+        class="absolute left-0 -bottom-1 w-full h-0.5 bg-current transition-transform duration-300
+        origin-center scale-x-0 {active === 'publications' ? 'scale-x-100' : ''}"
+      ></span>
+    </div>
+  </div>
+
+  <!-- right divider -->
+  <div
+    class="flex-1 h-px transition-colors duration-400
+    {active === 'projects' ? 'bg-white/80' : 'bg-white/30'}"
+  ></div>
+</div>
+{#if active === 'publications'}
+<div class="space-y-6">
+  {#each data.publications as pub, index (pub.title + index)}
+    {@const titleParts = pub.title.split('//')}
+    {@const displayTitle = titleParts[0]}
+    {@const logoName = titleParts[1]}
+
+    <div class="relative pl-5 project-item">
+      <!-- left decoration (logo / diamond + lines) -->
+      <div class="transform translate-y-[2px] absolute left-0 top-0 h-full">
+        {#if logoName}
+          <div class="absolute left-0 top-[5px] h-[calc(50%-22px)] w-0.5 bg-white opacity-60 rounded-[1px]"></div>
+          <div class="absolute left-0 bottom-[5px] h-[calc(50%-22px)] w-0.5 bg-white opacity-60 rounded-[1px]"></div>
+          <div class="absolute left-[-20px] top-1/2 transform -translate-y-1/2 translate-x-[11px]">
+            <img
+              src="/icons/{logoName}.png"
+              alt={logoName}
+              class="w-6 h-6 opacity-70 object-contain invert"
+            />
+          </div>
+        {:else}
+          <div class="absolute left-0 top-[5px] h-[calc(50%-22px)] w-0.5 bg-white opacity-60 rounded-[1px]"></div>
+          <div class="absolute left-0 bottom-[5px] h-[calc(50%-22px)] w-0.5 bg-white opacity-60 rounded-[1px]"></div>
+          <div class="absolute left-[-2.5px] top-1/2 transform -translate-y-1/2 w-2 h-2 bg-white opacity-60 rotate-45 rounded-[1px]"></div>
+        {/if}
+      </div>
+
+      <!-- content -->
+      <div class="flex items-start">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center">
+            <h2 class="text-sm md:text-base text-gray-200 leading-5 tracking-tight font-['Rubik'] pr-[2px] font-medium">
+              {#if pub.urls && pub.urls.length > 0}
+                <a
+                  href={pub.urls[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-title-link transition-opacity duration-75"
+                  onmouseenter={() => hoveredTitleIndex = index}
+                  onmouseleave={() => hoveredTitleIndex = -1}
+                  style="opacity: {hoveredTitleIndex === index || hoveredFirstIconIndex === index ? 0.6 : 1}"
+                >
+                  {displayTitle}
+                </a>
+              {:else}
+                {displayTitle}
+              {/if}
+            </h2>
+            {#if pub.urls && pub.urls.length > 1}
+              <div class="flex items-center">
+                {#each pub.urls as urlData, urlIndex}
+                  <a
+                    href={urlData.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-200 transition-opacity relative inline-block transform -translate-y-[3px]"
+                    onmouseenter={() => {
+                      if (urlIndex === 0) hoveredFirstIconIndex = index;
+                      hoveredIconIndex = `${index}-${urlIndex}`;
+                    }}
+                    onmouseleave={() => {
+                      if (urlIndex === 0) hoveredFirstIconIndex = -1;
+                      hoveredIconIndex = null;
+                    }}
+                    style="opacity: {
+                      urlIndex === 0 ?
+                        (hoveredTitleIndex === index || hoveredFirstIconIndex === index ? 0.6 : 1) :
+                        (hoveredIconIndex === `${index}-${urlIndex}` ? 0.6 : 1)
+                    }"
+                  >
+                    <img
+                      src="/icons/{urlData.icon}.svg"
+                      alt={urlData.icon}
+                      class="w-4 h-4 invert mx-[6px]"
+                    />
+                    <svg
+                      class="absolute -top-px right-[3px] w-2.5 h-2.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M7 17L17 7M17 7H8M17 7V16"
+                        stroke="#261e29"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7 17L17 7M17 7H8M17 7V16"
+                        stroke="#ffffff"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                {/each}
+              </div>
+            {/if}
+          </div>
+          <p class="text-gray-300 leading-relaxed tracking-tighter font-['Rubik']">
+            {pub.description}
+          </p>
+          <div class="flex items-center gap-3 text-sm tracking-tight text-gray-400 font-['Rubik']">
+            <span class="tech">{pub.date}</span>
+            <span class="text-xs">◆</span>
+            <div class="date">{pub.tech}</div>
+            {#if pub.views}
+              <span class="text-xs">◆</span>
+              <div class="views transform -translate-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 -960 960 960"
+                  width="16px"
+                  fill="currentColor"
+                >
+                  <path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/>
+                </svg>
+                {pub.views}
+              </div>
+            {/if}
+            {#if pub.downloads}
+              <span class="text-xs">◆</span>
+              <div class="downloads transform -translate-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 -960 960 960"
+                  width="16px"
+                  fill="currentColor"
+                >
+                  <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
+                </svg>
+                {pub.downloads}
+              </div>
+            {/if}
+          </div>
+        </div>
+      </div>
+    </div>
+  {/each}
+</div>
+
+
+{:else}
             <div class="space-y-8">
                 {#each data.projects as project, projectIndex}
                     {@const titleParts = project.title.split('//')}
@@ -981,6 +1241,7 @@
                     </div>
                 {/each}
             </div>
+        {/if}
         </div>
     </div>
     </div>
