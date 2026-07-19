@@ -3,7 +3,7 @@
 ## ArbiterPUF
 **URLS:** 
     https://github.com/a0ax/ArbiterPUF|github
-**Description:** Compact RTL framework for simulating Arbiter PUF variants, extracting CRPs, measuring core PUF metrics, and benchmarking simple modeling attacks
+**Description:** RTL framework for simulating Arbiter PUFs, analyzing CRPs, evaluating metrics, and benchmarking modeling attacks    
 **Tech:** SystemVerilog, Python
 **Date:** 2026
 
